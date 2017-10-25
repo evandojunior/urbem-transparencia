@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Node/AdjacencyList
+END
+PostOrderIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Node/AdjacencyList/PostOrderIterator.php
+END
+PreOrderIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Node/AdjacencyList/PreOrderIterator.php
+END
+LevelOrderIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Node/AdjacencyList/LevelOrderIterator.php
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Relation
+END
+Association.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Relation/Association.php
+END
+Parser.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Relation/Parser.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Relation/Exception.php
+END
+ForeignKey.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Relation/ForeignKey.php
+END
+LocalKey.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Relation/LocalKey.php
+END
+Nest.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Relation/Nest.php
+END

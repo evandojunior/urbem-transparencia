@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Locator
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Locator/Exception.php
+END
+Injectable.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Locator/Injectable.php
+END

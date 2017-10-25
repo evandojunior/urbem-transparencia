@@ -1,0 +1,293 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine
+END
+Inflector.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Inflector.php
+END
+Node.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Node.php
+END
+Validator.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator.php
+END
+EventListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/EventListener.php
+END
+Migration.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Migration.php
+END
+Parser.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Parser.php
+END
+Hydrator.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Hydrator.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Exception.php
+END
+Pager.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Pager.php
+END
+Overloadable.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Overloadable.php
+END
+Configurable.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Configurable.php
+END
+Locator.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Locator.php
+END
+Query.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Query.php
+END
+Lib.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Lib.php
+END
+AuditLog.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/AuditLog.php
+END
+RawSql.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/RawSql.php
+END
+Null.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Null.php
+END
+Import.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Import.php
+END
+Template.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Template.php
+END
+Util.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Util.php
+END
+DataDict.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/DataDict.php
+END
+Relation.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Relation.php
+END
+Event.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Event.php
+END
+Export.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Export.php
+END
+IntegrityMapper.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/IntegrityMapper.php
+END
+Transaction.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Transaction.php
+END
+Builder.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Builder.php
+END
+Table.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Table.php
+END
+Core.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Core.php
+END
+Collection.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Collection.php
+END
+Column.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Column.php
+END
+Expression.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Expression.php
+END
+Tree.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Tree.php
+END
+Connection.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Connection.php
+END
+Hook.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Hook.php
+END
+Access.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Access.php
+END
+Task.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Task.php
+END
+Formatter.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Formatter.php
+END
+Search.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Search.php
+END
+Cli.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Cli.php
+END
+Sequence.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Sequence.php
+END
+Data.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Data.php
+END
+Compiler.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Compiler.php
+END
+View.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/View.php
+END
+Manager.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Manager.php
+END
+Record.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Record.php
+END
+I18n.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/I18n.php
+END
+File.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/File.php
+END

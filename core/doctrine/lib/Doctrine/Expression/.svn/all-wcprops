@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Expression
+END
+Pgsql.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Expression/Pgsql.php
+END
+Mock.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Expression/Mock.php
+END
+Driver.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Expression/Driver.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Expression/Exception.php
+END
+Mssql.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Expression/Mssql.php
+END
+Sqlite.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Expression/Sqlite.php
+END
+Mysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Expression/Mysql.php
+END
+Oracle.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Expression/Oracle.php
+END

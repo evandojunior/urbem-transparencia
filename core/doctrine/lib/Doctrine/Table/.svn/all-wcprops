@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Table
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Table/Exception.php
+END
+Repository.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Table/Repository.php
+END

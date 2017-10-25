@@ -1,0 +1,13 @@
+{
+    "name": "urbem/transparencia",
+    "require": {
+        "swiftmailer/swiftmailer": "5.4",
+        "symfony/yaml": "^3.3"
+    },
+    "authors": [
+        {
+            "name": "CNM",
+            "email": "suporte@cnm.org"
+        }
+    ]
+}

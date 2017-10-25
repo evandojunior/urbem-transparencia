@@ -1,0 +1,22 @@
+<?php
+
+session_start();
+
+$codigoCaptcha = substr(md5( time() ) ,0,6);
+ 
+$_SESSION['captcha'] = $codigoCaptcha;
+
+$imagemCaptcha = imagecreatefrompng("/var/www/transparencia/media/img/captcha1.png");
+ 
+$fonteCaptcha = '/var/www/transparencia/media/fonts/arial.ttf';
+ 
+$corCaptcha = imagecolorallocate($imagemCaptcha,50,50,50);
+
+imagettftext($imagemCaptcha, 20, 0, 60, 35, $corCaptcha, $fonteCaptcha, $codigoCaptcha);
+
+header("Content-type: image/png");
+
+imagepng($imagemCaptcha);
+
+imagedestroy($imagemCaptcha);
+

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Parser/sfYaml
+END
+sfYamlDumper.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Parser/sfYaml/sfYamlDumper.php
+END
+sfYamlParser.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Parser/sfYaml/sfYamlParser.php
+END
+sfYamlInline.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Parser/sfYaml/sfYamlInline.php
+END
+sfYaml.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Parser/sfYaml/sfYaml.php
+END

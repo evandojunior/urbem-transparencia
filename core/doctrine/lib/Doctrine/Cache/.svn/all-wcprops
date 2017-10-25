@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Cache
+END
+Array.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Cache/Array.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Cache/Exception.php
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Cache/Interface.php
+END
+Memcache.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Cache/Memcache.php
+END
+Apc.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Cache/Apc.php
+END
+Db.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Cache/Db.php
+END
+Driver.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Cache/Driver.php
+END
+Xcache.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Cache/Xcache.php
+END

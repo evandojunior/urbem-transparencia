@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator
+END
+Creditcard.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Creditcard.php
+END
+Unique.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Unique.php
+END
+Past.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Past.php
+END
+Ip.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Ip.php
+END
+Notblank.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Notblank.php
+END
+Future.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Future.php
+END
+Unsigned.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Unsigned.php
+END
+Date.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Date.php
+END
+Readonly.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Readonly.php
+END
+ErrorStack.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/ErrorStack.php
+END
+Minlength.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Minlength.php
+END
+Email.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Email.php
+END
+Usstate.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Usstate.php
+END
+Nospace.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Nospace.php
+END
+Regexp.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Regexp.php
+END
+Notnull.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Notnull.php
+END
+Driver.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Driver.php
+END
+Range.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Range.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Exception.php
+END
+Time.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Time.php
+END
+Htmlcolor.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Htmlcolor.php
+END
+Country.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Country.php
+END
+Timestamp.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Validator/Timestamp.php
+END

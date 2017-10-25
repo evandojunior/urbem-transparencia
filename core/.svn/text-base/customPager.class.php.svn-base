@@ -1,0 +1,26 @@
+<?php
+
+class CustomPager {
+    private $num_pages;
+    private $page;
+    
+    public function getNumPages(){
+        return $this->num_pages;
+    }
+    
+    public function setNumPages($num_pages){
+        $this->num_pages = $num_pages;
+    }
+    
+    public function getPage(){
+        return $this->page;
+    }
+    
+    public function setPage($page){
+        $this->page = $page;
+    }
+    
+    
+}
+    
+    

@@ -1,0 +1,21 @@
+parameters:
+    database_host:     localhost
+    database_port:     2345
+    database_name:     'urbem-transparencia'
+    database_user:     'transparencia'
+    database_password: '3kRqEUPhBnRJThb4'
+
+    # Email
+    mailer_transport: smtp
+    mailer_host: smtp.gmail.com
+    mailer_port: 25
+    mailer_encryption: tls
+    mailer_user: urbem@cnm.org.br
+    mailer_password: 'Longevo@17'
+
+    # Date
+    timezone: 'America/Sao_Paulo'
+    debug: false
+
+    # Storage
+    portal_transparencia_config_prefeitura_info_path: '/var/www/storage/prefeitura.yml'

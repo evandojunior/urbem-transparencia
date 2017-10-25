@@ -1,0 +1,86 @@
+<?php
+
+class Email{
+	
+	private $destinatario;
+	private $assunto;
+	private $mensagem;
+	private $remetente;
+    private $template;
+
+    
+    public function __construct(){
+        $this->template = null;
+    }
+
+	public function getDestinatario(){
+	    return $this->destinatario;
+	}
+
+	public function setDestinatario($destinatario){
+		if(is_array($destinatario)){
+	    	$this->destinatario = concatStr($destinatario, ',');
+		} else {
+			$this->destinatario = $destinatario;
+		}
+	}
+
+	public function getAssunto(){
+	    return $this->assunto;
+	}
+
+	public function setAssunto($assunto){
+	    $this->assunto = $GLOBALS['MAIL_TITLE'].' - '.$assunto;
+	}
+	
+	public function getMensagem(){
+	    return $this->mensagem;
+	}
+
+	public function setMensagem($mensagem){
+	    $this->mensagem = $mensagem;
+	}
+
+	public function getRemetente(){
+	    return $this->remetente;
+	}
+
+	public function setRemetente($remetente){
+	    if(Validator::validateEmail($remetente)){
+	    	$this->remetente = $remetente;	
+	    } else {
+	    	$this->remetente = $GLOBALS['MAIL_SENDER'];
+	    }
+	}
+	
+	public function getTemplate(){
+	    return $this->template;
+	}
+
+	public function setTemplate($template){
+	    $this->template = $template;
+	}
+	
+	public function enviar($params=null){
+       /* if($this->template == null){
+			$params['mensagem'] = $this->mensagem;        	
+        	$this->template = 'default';
+        }
+        
+        ob_start();
+		require_once $GLOBALS['BASE_DIR'].'site/templates/email/'.$this->template.'.php';
+		$html = ob_get_contents();
+		ob_end_clean(); */      
+        
+		$headers = "MIME-Version: 1.0\n";
+		$headers .= "Content-type: text/html; charset=iso-8859-1\n";
+		$headers .= "From: ".$GLOBALS['MAIL_RESPONSE']."\n";
+		$headers .= "Return-Path: ".$GLOBALS['MAIL_RESPONSE']."\n";
+		
+		if(mail($this->destinatario, $this->assunto, $this->mensagem, $headers)){
+			return true;
+		} else {
+			throw new Exception('Erro ao enviar o e-mail');
+		}
+	}
+}

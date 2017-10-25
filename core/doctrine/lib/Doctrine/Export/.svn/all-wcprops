@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Export
+END
+Reporter.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Export/Reporter.php
+END
+Mysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Export/Mysql.php
+END
+Oracle.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Export/Oracle.php
+END
+Pgsql.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Export/Pgsql.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Export/Exception.php
+END
+Mssql.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Export/Mssql.php
+END
+Schema.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Export/Schema.php
+END
+Sqlite.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Export/Sqlite.php
+END

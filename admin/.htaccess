@@ -1,0 +1,85 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+Options +FollowSymLinks
+
+RewriteBase /transparencia/admin
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !^/index.php
+
+RewriteRule ^setLogin(.*)$ index.php?module=usuario&action=setLogin [NC,L]
+RewriteRule ^login(.*)$ index.php?module=usuario&action=login [NC,L]
+RewriteRule ^logout(.*)$ index.php?module=usuario&action=logout [NC,L]
+RewriteRule ^setConta(.*)$ index.php?module=usuario&action=setConta [NC,L]
+RewriteRule ^updateConta(.*)$ index.php?module=usuario&action=updateConta [NC,L]
+
+RewriteRule ^home$ index.php?module=home&action=index [QSA,L]
+
+RewriteRule ^configuracaoEntidade/update(.*)$ index.php?module=configuracaoEntidade&action=update [NC,L]
+RewriteRule ^configuracaoEntidade(.*)$ index.php?module=configuracaoEntidade&action=index&id=$1 [NC,L]
+
+RewriteRule ^configuracao/([0-9]+)$ index.php?module=configuracao&action=show&id=$1 [NC,L]
+RewriteRule ^configuracao/new(.*)$ index.php?module=configuracao&action=_new [NC,L]
+RewriteRule ^configuracao/create(.*)$ index.php?module=configuracao&action=create [NC,L]
+RewriteRule ^configuracao/edit/([0-9]+)$ index.php?module=configuracao&action=edit&id=$1 [NC,L]
+RewriteRule ^configuracao/update/([0-9]+)$ index.php?module=configuracao&action=update&id=$1 [NC,L]
+RewriteRule ^configuracao/delete/([0-9]+)$ index.php?module=configuracao&action=delete&id=$1 [NC,L]
+RewriteRule ^configuracao(.*)$ index.php?module=configuracao&action=index&$1 [QSA,L]
+
+RewriteRule ^grupo/([0-9]+)$ index.php?module=grupo&action=show&id=$1 [NC,L]
+RewriteRule ^grupo/new(.*)$ index.php?module=grupo&action=_new [NC,L]
+RewriteRule ^grupo/create(.*)$ index.php?module=grupo&action=create [NC,L]
+RewriteRule ^grupo/edit/([0-9]+)$ index.php?module=grupo&action=edit&id=$1 [NC,L]
+RewriteRule ^grupo/update/([0-9]+)$ index.php?module=grupo&action=update&id=$1 [NC,L]
+RewriteRule ^grupo/delete/([0-9]+)$ index.php?module=grupo&action=delete&id=$1 [NC,L]
+RewriteRule ^grupo(.*)$ index.php?module=grupo&action=index&$1 [QSA,L]
+
+RewriteRule ^usuario/([0-9]+)(.*)$ index.php?module=usuario&action=show&id=$1 [QSA,L]
+RewriteRule ^usuario/new(.*)$ index.php?module=usuario&action=_new [NC,L]
+RewriteRule ^usuario/create(.*)$ index.php?module=usuario&action=create [NC,L]
+RewriteRule ^usuario/edit/([0-9]+)$ index.php?module=usuario&action=edit&id=$1 [NC,L]
+RewriteRule ^usuario/update/([0-9]+)$ index.php?module=usuario&action=update&id=$1 [NC,L]
+RewriteRule ^usuario/delete/([0-9]+)$ index.php?module=usuario&action=delete&id=$1 [NC,L]
+RewriteRule ^usuario/foto/([0-9]+)(.*)$ index.php?module=usuario&action=setFoto&id=$1 [QSA,L]
+RewriteRule ^usuario/foto/send/([0-9]+)(.*)$ index.php?module=usuario&action=sendFoto&id=$1 [QSA,L]
+RewriteRule ^usuario/foto/crop/([0-9]+)/(.*)$ index.php?module=usuario&action=cropFoto&id=$1 [QSA,L]
+RewriteRule ^usuario/foto/setCrop/([0-9]+)/(.*)$ index.php?module=usuario&action=setCrop&id=$1 [QSA,L]
+RewriteRule ^usuario/editStatus/([0-9]+)$ index.php?module=usuario&action=editStatus&id=$1 [QSA,L]
+RewriteRule ^usuario/endereco/([0-9]+)$ index.php?module=usuario&action=AJAXgetEnderecos&id=$1&ajax=true [QSA,L]
+RewriteRule ^usuario(.*)$ index.php?module=usuario&action=index&$1 [QSA,L]
+
+RewriteRule ^pessoaEndereco/([0-9]+)/([0-9]+)$ index.php?module=pessoa&action=showEndereco&pessoaId=$1&id=$2 [NC,L]
+RewriteRule ^pessoaEndereco/([0-9]+)/new(.*)$ index.php?module=pessoa&action=_newEndereco&pessoaId=$1 [NC,L]
+RewriteRule ^pessoaEndereco/([0-9]+)/create(.*)$ index.php?module=pessoa&action=createEndereco&pessoaId=$1 [NC,L]
+RewriteRule ^pessoaEndereco/([0-9]+)/edit/([0-9]+)$ index.php?module=pessoa&action=editEndereco&pessoaId=$1&id=$2 [NC,L]
+RewriteRule ^pessoaEndereco/([0-9]+)/update/([0-9]+)$ index.php?module=pessoa&action=updateEndereco&pessoaId=$1&id=$2 [NC,L]
+RewriteRule ^pessoaEndereco/([0-9]+)/delete/([0-9]+)$ index.php?module=pessoa&action=deleteEndereco&pessoaId=$1&id=$2 [NC,L]
+
+RewriteRule ^endereco/municipio/([0-9]+)$ index.php?module=endereco&action=AJAXgetMunicipios&uf=$1&ajax=true [QSA,L]
+
+RewriteRule ^historico/([0-9]+)$ index.php?module=historico&action=show&id=$1 [QSA,L]
+RewriteRule ^historico/new/(.*)/([0-9]+)$ index.php?module=historico&action=_new&moduleHistorico=$1&entidade_id=$2 [QSA,L]
+RewriteRule ^historico/create/(.*)/([0-9]+)$ index.php?module=historico&action=create&moduleHistorico=$1&entidade_id=$2 [QSA,L]
+RewriteRule ^historico/edit/([0-9]+)$ index.php?module=historico&action=edit&id=$1 [NC,L]
+RewriteRule ^historico/update/([0-9]+)$ index.php?module=historico&action=update&id=$1 [NC,L]
+RewriteRule ^historico/delete/([0-9]+)$ index.php?module=historico&action=delete&id=$1 [NC,L]
+RewriteRule ^historico(.*)$ index.php?module=historico&action=index&$1 [QSA,L]
+
+RewriteRule ^publicacao/([0-9]+)$ index.php?module=publicacao&action=show&id=$1 [NC,L]
+RewriteRule ^publicacao/new(.*)$ index.php?module=publicacao&action=_new [NC,L]
+RewriteRule ^publicacao/create(.*)$ index.php?module=publicacao&action=create [NC,L]
+RewriteRule ^publicacao/edit/([0-9]+)$ index.php?module=publicacao&action=edit&id=$1 [NC,L]
+RewriteRule ^publicacao/update/([0-9]+)$ index.php?module=publicacao&action=update&id=$1 [NC,L]
+RewriteRule ^publicacao/delete/([0-9]+)$ index.php?module=publicacao&action=delete&id=$1 [NC,L]
+RewriteRule ^publicacao(.*)$ index.php?module=publicacao&action=index&$1 [QSA,L]
+
+RewriteRule ^url/url/(.*)$ index.php?module=url&action=AJAXgetURL&url=$1&ajax=true [QSA,L]
+</IfModule>
+
+
+php_flag magic_quotes_gpc off
+
+php_flag register_globals off
+
+

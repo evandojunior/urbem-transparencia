@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Hook
+END
+Integer.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Hook/Integer.php
+END
+WordLike.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Hook/WordLike.php
+END
+Equal.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Hook/Equal.php
+END
+Parser.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Hook/Parser.php
+END

@@ -1,0 +1,392 @@
+<?php
+
+/*
+ * Funções relacionadas a permissão
+ */
+
+function postRequired($url=null){
+	if($_SERVER['REQUEST_METHOD'] != 'POST'){
+		if($url != null){
+			header('Location: '.$GLOBALS['BASE_URL'].Sessao::get('site').$url);
+		} else {
+			throw new Exception('Este tipo de requisição não é permitido');
+		}
+	}
+}
+
+function hasPerm($acao){
+	return UsuarioBO::hasPerm($acao);
+}
+
+function allowShow($acao){
+	return UsuarioBO::allowShow($acao);
+}
+
+function isAuth(){
+    if($_SERVER['X_REQUESTED_WITH'] == 'XMLHttpRequest'){
+        Load::json(array('return' => true, 'message' => 'Você precisa estar autenticado para acessar esta área'));
+    }
+
+    if(!UsuarioBO::isAuthSite()){
+        redirect('mensagem/autenticacao');
+    }
+}
+
+/*
+ * Funções relacionadas a URL
+ */
+
+function url($url=null){
+	if($url != null){
+		return $GLOBALS['BASE_URL'].Sessao::get('site').$url;
+	} else {
+		return $GLOBALS['BASE_URL'].Sessao::get('site');
+	}
+}
+
+function mediaURL($url){
+    $file = $GLOBALS['BASE_DIR'].'media/'.$url;
+    $url  = $GLOBALS['BASE_URL'].'media/'.$url;
+    if(file_exists($file)){
+        return $url;
+    } else {
+        return $GLOBALS['BASE_URL'].'media/default.png';    
+    }
+}
+
+function redirect($url=null){
+    if($url != null){
+	    if(strstr($url, 'http')){
+		    header('Location: '.$url);
+	    } else {
+		    header('Location: '.url($url));
+	    }
+    } else {
+	    header('Location: '.url());
+    }
+
+	exit;
+}
+
+/**
+ * Verifica se existe uma variávels next, 
+ * se não existir redireciona para url enviada por parametro 
+ */
+function redirectNext($url){
+	if(isset($_SESSION['next'])){
+		$next = $_SESSION['next'];
+		unset($_SESSION['next']);
+		
+		redirect($next);
+	} else {
+		redirect($url);
+	}
+}
+
+function getQueryStringPadrao(){
+	$queryString = '';
+	
+	if(Sessao::get('cod_entidade') != false){
+        $queryString.= '?cod_entidade='.Sessao::get('cod_entidade');
+    }
+	
+    if(Sessao::get('exercicio') != false){
+		if($queryString == '') {
+			$queryString.= '?';
+		} else {
+			$queryString.= '&';
+		}
+		
+        $queryString.= 'exercicio='.Sessao::get('exercicio');
+    }
+	
+	return $queryString;
+}
+
+/*
+ * Funções relacionadas a formatação
+ */
+
+function formatMoney($var){
+	if(($var != '')&&(is_numeric($var))){
+		return number_format($var, '2', ',', '.');
+	} else {
+		return '-,--';
+	}
+}
+
+function formatTimestampToPHP($timestamp){
+	if(($timestamp != '')&&($timestamp != '0000-00-00 00:00:00')){
+		return date("d/m/Y H:i:s", strtotime($timestamp));
+	} else {
+		return '';
+	}
+}
+
+function formatTimestampToMySQL($timestamp){
+	if($timestamp != ''){
+		return date("Y-m-d H:i:s", strtotime($timestamp));
+	} else {
+		return '';
+	}
+}
+
+function formatDateToPHP($date){
+	if(($date != '')&&($date != '0000-00-00')){
+		return date("d/m/Y", strtotime($date));
+	} else {
+		return '';
+	}
+}
+
+function formatPHPToDate($date){
+	if($date != ''){
+		$date = explode('/', $date);
+		return $date[2].'-'.$date[1].'-'.$date[0];
+	} else {
+		return '';
+	}
+}
+
+function formatLongText($text, $len){
+	if(strlen($text) > $len){
+		return substr($text, 0, $len).'(...)';
+	} else {
+		return $text;
+	}
+}
+
+function formatNumberPgSQL($number){
+	return substr($number, 0, -2).'.'.substr($number, -2);
+}
+
+function formatReadMore($text, $limit){
+	$len = strlen(trim($text));
+	if($len > $limit){
+		return '<a href="#" class="more" title="more"><img src="'.url('templates/default/img/read_more.png').'"/></a> '.substr($text, 0, $limit).' <span class="hide">'.substr($text, $limit, $len).'</span>';
+	} else {
+		return $text;
+	}
+}
+
+function formatCPFCNPJ($text){
+	$len = strlen(trim($text));
+	if($len > 11){
+		return substr($text, 0, 2).'.'.substr($text, 2, 3).'.'.substr($text, 5, 3).'/'.substr($text, 8, 4).'-'.substr($text, 12, 2);
+	}
+	
+	if($len == 11){
+		return substr($text, 0, 3).'.'.substr($text, 3, 3).'.'.substr($text, 6, 3).'-'.substr($text, 9, 2);
+	}
+}
+
+function getMesExtenso($numeroMes){
+	$numeroMes = intval($numeroMes);
+	
+	$mes[1] = 'janeiro';
+	$mes[2] = 'favereiro';
+	$mes[3] = 'marco';
+	$mes[4] = 'abril';
+	$mes[5] = 'maio';
+	$mes[6] = 'junho';
+	$mes[7] = 'julho';
+	$mes[8] = 'agosto';
+	$mes[9] = 'setembro';
+	$mes[10] = 'outubro';
+	$mes[11] = 'novembro';
+	$mes[12] = 'dezembro';
+	
+	return $mes[$numeroMes];
+}
+
+function getMesData($date, $format='') {
+	if($format == 'BR'){
+		$mes = substr($date, 3, 2);
+	}
+	
+	if($format == 'US'){
+		$mes = substr($date, 5, 2);
+	}
+	
+	return $mes;
+}
+
+function formatValorCartao($valor){
+	return str_pad(str_replace('.', '', $valor), '4', '0', STR_PAD_RIGHT);
+}
+
+function concatStr($array, $separator){
+	foreach($array as $value){
+		$str.= $value.$separator.' '; 
+	}
+	
+	return substr($str, 0, -2);
+}
+
+function retiraAcentos($texto){
+  $array1 = array('á', 'à', 'â', 'ã', 'ä', 'é', 'è', 'ê', 'ë', 'í', 'ì', 'î', 'ï', 'ó', 'ò', 'ô', 'õ', 'ö', 'ú', 'ù', 'û', 'ü', 'ç'
+                  , 'Á', 'À', 'Â', 'Ã', 'Ä', 'É', 'È', 'Ê', 'Ë', 'Í', 'Ì', 'Î', 'Ï', 'Ó', 'Ò', 'Ô', 'Õ', 'Ö', 'Ú', 'Ù', 'Û', 'Ü', 'Ç', '\'' );
+  $array2 = array('a', 'a', 'a', 'a', 'a', 'e', 'e', 'e', 'e', 'i', 'i', 'i', 'i', 'o', 'o', 'o', 'o', 'o', 'u', 'u', 'u', 'u', 'c'
+                  , 'A', 'A', 'A', 'A', 'A', 'E', 'E', 'E', 'E', 'I', 'I', 'I', 'I', 'O', 'O', 'O', 'O', 'O', 'U', 'U', 'U', 'U', 'C', '' );
+  return str_replace( $array1, $array2, $texto );
+} 
+
+function retiraCaracteresEspeciais($texto){
+  $array1 = array('/', ' ');
+  $array2 = array('-', '-');
+  return str_replace( $array1, $array2, $texto );
+}
+
+/*
+ * Funções genéricas
+ */
+
+function getImage($path, $filename, $default=null){
+	if($filename != ''){
+		return $path.$filename;
+	} else {
+		return url($default);
+	}
+}
+
+function getBrowser(){
+	$useragent = $_SERVER['HTTP_USER_AGENT'];
+  
+	if (preg_match('|MSIE ([0-9].[0-9]{1,2})|',$useragent,$matched)) {
+    	$browser_version=$matched[1];
+    	$browser = 'ie';
+  	} elseif (preg_match( '|Opera/([0-9].[0-9]{1,2})|',$useragent,$matched)) {
+    	$browser_version=$matched[1];
+    	$browser = 'opera';
+  	} elseif(preg_match('|Firefox/([0-9\.]+)|',$useragent,$matched)) {
+    	$browser_version=$matched[1];
+    	$browser = 'firefox';
+  	} elseif(preg_match('|Chrome/([0-9\.]+)|',$useragent,$matched)) {
+    	$browser_version=$matched[1];
+    	$browser = 'chrome';
+  	} elseif(preg_match('|Safari/([0-9\.]+)|',$useragent,$matched)) {
+    	$browser_version=$matched[1];
+    	$browser = 'safari';
+  	} else {
+    	// browser not recognized!
+    	$browser_version = 0;
+    	$browser= 'other';
+	}
+  
+	return $browser;
+}
+
+function getSO(){
+	if(strstr($_SERVER['HTTP_USER_AGENT'], Linux)) {
+   		return 'linux';
+   	} elseif(strstr($_SERVER['HTTP_USER_AGENT'], Windows)) {
+		return 'windows';
+   } else {
+		return 'other';
+   }
+}
+
+function printJsFilter($arrayColumn){
+	echo '$("form#pesquisa").submit(function(){
+		var q = $("input#id_q").val();	
+		var filter = $("select#id_filter").val();
+		window.location = "?q="+q+"&filter="+filter;
+		
+		return false;
+	});';
+	
+	while (list($key, $val) = each($arrayColumn)) {  
+	
+		if(($_REQUEST['order'] == $key)&&($_REQUEST['direction']=='asc')){
+			$direction = 'desc';
+		}else{
+			$direction = 'asc';	
+		}
+		
+		echo '$("'. $val .'").click(function(){
+				var q = $("input#id_q").val();
+				var filter = $("select#id_filter").val();
+				var order = "'.$key.'";
+				var direction = "'.$direction.'";
+				var page = $("select#selecionarPagina").val();
+				    	
+				window.location = "?q="+q+"&filter="+filter+"&order="+order+"&direction="+direction+"&page="+page;
+			});';
+	}  
+}
+
+function getMeses($i=null){
+	
+	if(is_numeric($i)){
+		$mes = array('1' => 'Janeiro', '2' => 'Fevereiro', '3' => 'Março', '4' => 'Abril', '5' => 'Maio', '6' => 'Junho', 
+					 '7' => 'Julho', '8' => 'Agosto', '9' => 'Setembro', '10' => 'Outubro', '11' => 'Novembro', 
+					 '12' => 'Dezembro');
+	} else {
+		$mes = array('janeiro' => 'Janeiro', 'fevereiro' => 'Fevereiro', 'marco' => 'Março', 'abril' => 'Abril', 'maio' => 'Maio', 'junho' => 'Junho',
+			'julho' => 'Julho', 'agosto'    => 'Agosto', 'setembro' => 'Setembro', 'outubro' => 'Outubro', 'novembro'  => 'Novembro',
+			'dezembro'  => 'Dezembro');
+	}
+		
+	if($i == null){
+		return $mes;
+	} else {
+		return $mes[$i];
+	}
+}
+
+function gerarSenha(){
+	$caracteres = 'abcdefghijlmnopqrstuvxz0123456789';
+	$max 		= strlen($caracteres)-1;
+  	$password 	= null;
+  	
+  	for($i=0; $i < 6; $i++) {
+   		$password.= $caracteres{mt_rand(0, $max)};
+  	}
+  	
+	return $password;
+}
+
+function getArrayKey($array, $valor){
+    if(is_array($array)){
+        while ($name = current($array)) {
+            if ($name == $valor) {
+                return key($array);
+            }
+    
+            next($array);
+        }
+    }
+
+    return false;
+}
+
+function getURL(){
+    $protocolo  = (strpos(strtolower($_SERVER['SERVER_PROTOCOL']),'https') === false) ? 'http' : 'https';
+    $host       = $_SERVER['HTTP_HOST'];
+    $script     = $_SERVER['SCRIPT_NAME'];
+    $parametros = $_SERVER['QUERY_STRING'];
+    $url        = $protocolo . '://' . $host . $script;
+    
+    if($parametros != ''){
+        $url = $url.'?'.$parametros;
+    }
+     
+    return $url;
+    //return $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];    
+}
+
+function geraAlias($texto){
+    return retiraAcentos(retiraCaracteresEspeciais($texto));
+}
+
+function limpaDiretorio($dir) {
+	$arquivos = scandir($dir);
+	
+	foreach($arquivos as $arquivo) {
+		if(($arquivo != '.') && ($arquivo != '..')){
+			unlink($dir.$arquivo);
+		}
+	}
+	
+	return true;
+}

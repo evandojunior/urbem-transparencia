@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/DataDict
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/DataDict/Exception.php
+END
+Mssql.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/DataDict/Mssql.php
+END
+Sqlite.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/DataDict/Sqlite.php
+END
+Mysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/DataDict/Mysql.php
+END
+Oracle.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/DataDict/Oracle.php
+END
+Pgsql.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/DataDict/Pgsql.php
+END

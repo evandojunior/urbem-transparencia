@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Migration
+END
+Builder.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Migration/Builder.php
+END
+IrreversibleMigrationException.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Migration/IrreversibleMigrationException.php
+END
+Diff.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Migration/Diff.php
+END
+Base.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Migration/Base.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Migration/Exception.php
+END
+Process.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Migration/Process.php
+END

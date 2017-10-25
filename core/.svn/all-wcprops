@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/!svn/ver/54842/transparencia/core
+END
+json.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/54402/transparencia/core/json.class.php
+END
+load.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/54402/transparencia/core/load.class.php
+END
+image.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/54402/transparencia/core/image.class.php
+END
+pdo.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/54822/transparencia/core/pdo.class.php
+END
+controller.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/54402/transparencia/core/controller.class.php
+END
+field.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/54820/transparencia/core/field.class.php
+END
+upload.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/54680/transparencia/core/upload.class.php
+END
+message.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/54402/transparencia/core/message.class.php
+END
+validator.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/54402/transparencia/core/validator.class.php
+END
+dto.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/54402/transparencia/core/dto.class.php
+END
+email.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/54694/transparencia/core/email.class.php
+END
+pagination.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/54402/transparencia/core/pagination.class.php
+END
+customPager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/54842/transparencia/core/customPager.class.php
+END
+utils.php
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/54820/transparencia/core/utils.php
+END
+sessao.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/54694/transparencia/core/sessao.class.php
+END
+conn.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/54570/transparencia/core/conn.class.php
+END
+plugin.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/54831/transparencia/core/plugin.class.php
+END
+captcha.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/54516/transparencia/core/captcha.php
+END
+model.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/54402/transparencia/core/model.class.php
+END
+form.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/54402/transparencia/core/form.class.php
+END
+search.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/54402/transparencia/core/search.class.php
+END

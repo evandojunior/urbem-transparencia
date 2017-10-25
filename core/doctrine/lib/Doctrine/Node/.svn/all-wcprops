@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Node
+END
+MaterializedPath.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Node/MaterializedPath.php
+END
+AdjacencyList.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Node/AdjacencyList.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Node/Exception.php
+END
+NestedSet.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Node/NestedSet.php
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Node/Interface.php
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Adapter/Statement
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Adapter/Statement/Interface.php
+END
+Oracle.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Adapter/Statement/Oracle.php
+END
+Mock.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Adapter/Statement/Mock.php
+END

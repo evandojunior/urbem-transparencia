@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+Options +FollowSymLinks
+
+RewriteBase /transparencia/
+
+RewriteRule ^media/(.*)$ media/$1 [QSA,L]
+RewriteRule ^plugins/(.*)$ plugins/$1 [QSA,L]
+RewriteRule ^scripts/(.*)$ scripts/$1 [QSA,L]
+RewriteRule ^uploads/(.*)$ uploads/$1 [QSA,L]
+RewriteRule ^core/captcha.php core/captcha.php [QSA,L]
+RewriteRule ^tmp/(.*)$ tmp/$1 [QSA,L]
+
+RewriteRule ^(.*)$ site/$1 [QSA,L]
+
+</IfModule>

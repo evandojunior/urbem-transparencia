@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Record
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Record/Exception.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Record/Abstract.php
+END
+UnknownPropertyException.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Record/UnknownPropertyException.php
+END
+Filter.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Record/Filter.php
+END
+Listener.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Record/Listener.php
+END
+Generator.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Record/Generator.php
+END
+Iterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Record/Iterator.php
+END

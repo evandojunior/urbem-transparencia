@@ -1,0 +1,135 @@
+AddDefaultCharset ISO-8859-1
+
+#Comprimi css em gzip
+<Files *.*>
+SetOutputFilter DEFLATE
+</Files>
+
+<IfModule mod_expires.c>
+# Turn on Expires and set default to 0
+ExpiresActive On
+ExpiresDefault A0
+ 
+# Seta cache para expirar em 1 ano
+<FilesMatch "\.(flv|ico|pdf|avi|mov|ppt|doc|mp3|wmv|wav)$">
+ExpiresDefault A29030400
+Header append Cache-Control "public"
+</FilesMatch>
+ 
+# Seta cache para expirar em 1 semana
+<FilesMatch "\.(gif|jpg|jpeg|png|swf|xml|txt|html|js|css)$">
+ExpiresDefault A604800
+Header append Cache-Control "public"
+</FilesMatch>
+ 
+# Força a não fazer cache de arquivos dinâmicos
+<FilesMatch "\.(php|cgi|pl|htm)$">
+ExpiresActive Off
+Header set Cache-Control "private, no-cache, no-store, proxy-revalidate, no-transform"
+Header set Pragma "no-cache"
+</FilesMatch>
+</IfModule>
+
+###############
+###############
+###############
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+Options +FollowSymLinks
+
+RewriteBase /transparencia/site
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !^/index.php
+
+########################## Relatorios PDF
+RewriteRule ^(.*)/(.*)/despesa/orgao/pdf$ index.php?module=mpdf&action=listaBalanceteDespesaOrgao&categoria=despesa&secao=orgao&template=blank2 [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/funcao/pdf$ index.php?module=mpdf&action=listaBalanceteDespesaFuncao&categoria=despesa&secao=funcao&template=blank2 [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/programa/pdf$ index.php?module=mpdf&action=listaBalanceteDespesaPrograma&categoria=despesa&secao=programa&template=blank2 [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/projeto/pdf$ index.php?module=mpdf&action=listaBalanceteDespesaProjeto&categoria=despesa&secao=projeto&template=blank2 [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/recurso/pdf$ index.php?module=mpdf&action=listaBalanceteDespesaRecurso&categoria=despesa&secao=recurso&template=blank2 [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/credor/pdf$ index.php?module=mpdf&action=listaBalanceteDespesaCredor&categoria=despesa&secao=credor&template=blank2 [QSA,L]
+
+RewriteRule ^(.*)/(.*)/despesa/categoria/([0-9]+)/natureza/([0-9]+)/elemento/([0-9]+)/empenho/pdf$ index.php?module=mpdf&action=listaEmpenho&categoria=despesa&secao=categoria&cod_categoria=$3&cod_natureza=$4&cod_elemento=$5&natureza=natureza&elemento=elemento&empenho=empenho&template=blank2 [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/categoria/([0-9]+)/natureza/([0-9]+)/elemento/pdf$ index.php?module=mpdf&action=listaBalanceteDespesaCategoriaElemento&categoria=despesa&secao=categoria&cod_categoria=$3&cod_natureza=$4&natureza=natureza&elemento=elemento&nivel=elemento&template=blank2 [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/categoria/([0-9]+)/natureza/pdf$ index.php?module=mpdf&action=listaBalanceteDespesaCategoriaNatureza&categoria=despesa&secao=categoria&cod_categoria=$3&natureza=natureza&nivel=natureza&template=blank2 [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/categoria/pdf$ index.php?module=mpdf&action=listaBalanceteDespesaCategoria&categoria=despesa&secao=categoria&nivel=categoria&template=blank2 [QSA,L]
+
+RewriteRule ^(.*)/(.*)/despesa/(.*)/empenho/(.*)/pdf$ index.php?module=mpdf&action=listaEmpenho&categoria=despesa&secao=$3&empenho=empenho&id=$4&template=blank2 [QSA,L]
+RewriteRule ^(.*)/(.*)/empenho/([0-9]+)/pdf$ index.php?module=mpdf&action=detalheEmpenho&categoria=despesa&secao=empenho&cod_empenho=$3&template=blank2 [QSA,L]
+RewriteRule ^(.*)/(.*)/compra_licitacao/(.*)/empenho/(.*),(.*),(.*),(.*)/pdf$ index.php?module=mpdf&action=listaEmpenho&categoria=compra_licitacao&secao=$3&empenho=empenho&cod_entidade=$4&exercicio_entidade=$5&cod=$6&modalidade=$7&template=blank2 [QSA,L]
+
+RewriteRule ^(.*)/(.*)/receita/conta/pdf$ index.php?module=mpdf&action=listaBalanceteReceitaConta&categoria=receita&secao=conta&template=blank2 [QSA,L]
+RewriteRule ^(.*)/(.*)/receita/mes/pdf$ index.php?module=mpdf&action=listaBalanceteReceitaMes&categoria=receita&secao=mes&template=blank2 [QSA,L]
+
+RewriteRule ^(.*)/(.*)/compra_licitacao/compra/pdf$ index.php?module=mpdf&action=listaCompra&categoria=compra_licitacao&secao=compra&template=blank2 [QSA,L]
+RewriteRule ^(.*)/(.*)/compra_licitacao/licitacao/pdf$ index.php?module=mpdf&action=listaLicitacao&categoria=compra_licitacao&secao=licitacao&template=blank2 [QSA,L]
+
+RewriteRule ^(.*)/(.*)/quadro_funcional/cargo/pdf$ index.php?module=mpdf&action=listaCargo&categoria=quadro_funcional&secao=cargo&template=blank2  [QSA,L]
+RewriteRule ^(.*)/(.*)/quadro_funcional/servidor/pdf$ index.php?module=mpdf&action=listaServidor&categoria=quadro_funcional&secao=servidor&template=blank2  [QSA,L]
+RewriteRule ^(.*)/(.*)/quadro_funcional/estagiario/pdf$ index.php?module=mpdf&action=listaEstagiario&categoria=quadro_funcional&secao=estagiario&template=blank2  [QSA,L]
+RewriteRule ^(.*)/(.*)/quadro_funcional/cedidoadido/pdf$ index.php?module=mpdf&action=listaCedidoAdido&categoria=quadro_funcional&secao=cedidoadido&template=blank2  [QSA,L]
+RewriteRule ^(.*)/(.*)/quadro_funcional/remuneracao/pdf$ index.php?module=mpdf&action=listaRemuneracao&categoria=quadro_funcional&secao=remuneracao&template=blank2  [QSA,L]
+##########################
+
+# Despesas
+RewriteRule ^(.*)/(.*)/despesa/orgao$ index.php?module=site&action=listaBalanceteDespesaOrgao&categoria=despesa&secao=orgao [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/funcao$ index.php?module=site&action=listaBalanceteDespesaFuncao&categoria=despesa&secao=funcao [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/programa$ index.php?module=site&action=listaBalanceteDespesaPrograma&categoria=despesa&secao=programa [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/projeto$ index.php?module=site&action=listaBalanceteDespesaProjeto&categoria=despesa&secao=projeto [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/recurso$ index.php?module=site&action=listaBalanceteDespesaRecurso&categoria=despesa&secao=recurso [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/credor$ index.php?module=site&action=listaBalanceteDespesaCredor&categoria=despesa&secao=credor [QSA,L]
+
+# Despesas por categoria
+RewriteRule ^(.*)/(.*)/despesa/categoria/([0-9]+)/natureza/([0-9]+)/elemento/([0-9]+)/empenho$ index.php?module=site&action=listaEmpenho&categoria=despesa&secao=categoria&cod_categoria=$3&cod_natureza=$4&cod_elemento=$5&natureza=natureza&elemento=elemento&empenho=empenho [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/categoria/([0-9]+)/natureza/([0-9]+)/elemento$ index.php?module=site&action=listaBalanceteDespesaCategoriaElemento&categoria=despesa&secao=categoria&cod_categoria=$3&cod_natureza=$4&natureza=natureza&elemento=elemento&nivel=elemento [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/categoria/([0-9]+)/natureza$ index.php?module=site&action=listaBalanceteDespesaCategoriaNatureza&categoria=despesa&secao=categoria&cod_categoria=$3&natureza=natureza&nivel=natureza [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/categoria$ index.php?module=site&action=listaBalanceteDespesaCategoria&categoria=despesa&secao=categoria&nivel=categoria [QSA,L]
+
+## Empenhos Item e Historico
+RewriteRule ^(.*)/(.*)/despesa/empenho/([0-9]+)/item$ index.php?module=site&action=listaItem&categoria=despesa&secao=$3&empenho=empenho&cod_empenho=$3 [QSA,L]
+RewriteRule ^(.*)/(.*)/despesa/empenho/([0-9]+)/historico$ index.php?module=site&action=listaHistorico&categoria=despesa&secao=$3&empenho=empenho&cod_empenho=$3 [QSA,L]
+# Empenhos Lista
+RewriteRule ^(.*)/(.*)/despesa/(.*)/empenho/(.*)$ index.php?module=site&action=listaEmpenho&categoria=despesa&secao=$3&empenho=empenho&id=$4 [QSA,L]
+RewriteRule ^(.*)/(.*)/compra_licitacao/(.*)/empenho/(.*),(.*),(.*),(.*)$ index.php?module=site&action=listaEmpenho&categoria=compra_licitacao&secao=$3&empenho=empenho&cod_entidade=$4&exercicio_entidade=$5&cod=$6&modalidade=$7 [QSA,L]
+
+# Receitas
+RewriteRule ^(.*)/(.*)/receita/conta$ index.php?module=site&action=listaBalanceteReceitaConta&categoria=receita&secao=conta [QSA,L]
+RewriteRule ^(.*)/(.*)/receita/mes$ index.php?module=site&action=listaBalanceteReceitaMes&categoria=receita&secao=mes [QSA,L]
+
+# Compra e Licitação
+RewriteRule ^(.*)/(.*)/compra_licitacao/compra$ index.php?module=site&action=listaCompra&categoria=compra_licitacao&secao=compra [QSA,L]
+RewriteRule ^(.*)/(.*)/compra_licitacao/licitacao$ index.php?module=site&action=listaLicitacao&categoria=compra_licitacao&secao=licitacao [QSA,L]
+
+# Quadro Funcional
+RewriteRule ^(.*)/(.*)/quadro_funcional/cargo$ index.php?module=site&action=listaCargo&categoria=quadro_funcional&secao=cargo [QSA,L]
+RewriteRule ^(.*)/(.*)/quadro_funcional/servidor$ index.php?module=site&action=listaServidor&categoria=quadro_funcional&secao=servidor [QSA,L]
+RewriteRule ^(.*)/(.*)/quadro_funcional/estagiario$ index.php?module=site&action=listaEstagiario&categoria=quadro_funcional&secao=estagiario [QSA,L]
+RewriteRule ^(.*)/(.*)/quadro_funcional/cedidoadido$ index.php?module=site&action=listaCedidoAdido&categoria=quadro_funcional&secao=cedidoadido [QSA,L]
+RewriteRule ^(.*)/(.*)/quadro_funcional/remuneracao$ index.php?module=site&action=listaRemuneracao&categoria=quadro_funcional&secao=remuneracao [QSA,L]
+
+# Publicações gerais
+RewriteRule ^(.*)/(.*)/publicacao/geral$ index.php?module=site&action=listaPublicacaoGeral [QSA,L]
+
+# Publicações das seções
+RewriteRule ^(.*)/(.*)/publicacao/(.*)$ index.php?module=site&action=listaPublicacao&categoria=$3 [QSA,L]
+
+# Ajax
+RewriteRule ^buscaMunicipio/$ index.php?module=site&action=buscaMunicipio [QSA,L]
+
+# Site
+RewriteRule ^home$ index.php?module=site&action=index [QSA,L]
+RewriteRule ^como-funciona$ index.php?module=site&action=comoFunciona [QSA,L]
+RewriteRule ^legislacao$ index.php?module=site&action=legislacao [QSA,L]
+RewriteRule ^contato$ index.php?module=site&action=contato [QSA,L]
+RewriteRule ^contato/create$ index.php?module=site&action=createContato [QSA,L]
+RewriteRule ^(.*)/(.*)/$ index.php?module=site&action=index2&sigla=$1&alias=$2 [QSA,L]
+RewriteRule ^(.*)/(.*)/alterar-municipio$ index.php?module=site&action=alterarMunicipio [QSA,L]
+RewriteRule ^(.*)/(.*)/publicacao/(.*)$ index.php?module=site&action=listaPublicacao&categoria=$3 [QSA,L]
+
+</IfModule>
+
+php_flag magic_quotes_gpc off
+php_flag register_globals off

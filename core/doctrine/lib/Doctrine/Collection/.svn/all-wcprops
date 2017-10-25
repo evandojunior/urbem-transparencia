@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Collection
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Collection/Exception.php
+END
+OnDemand.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Collection/OnDemand.php
+END
+Offset.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Collection/Offset.php
+END
+Iterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/54402/transparencia/core/doctrine/lib/Doctrine/Collection/Iterator.php
+END
